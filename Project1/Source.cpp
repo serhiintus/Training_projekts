@@ -1,4 +1,6 @@
 //CallBack funkcion
+//This program breaks a line of text into parts, then sorts those parts and displays them on the console screen.
+
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
