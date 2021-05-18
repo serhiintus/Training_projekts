@@ -1,6 +1,7 @@
 #include<string.h>
 #include"Header.h"
 
+//This function sorts the elements of the array from smallest to largest.
 void SortArr(int farr[], int size)
 {
 	int buff;
@@ -13,6 +14,8 @@ void SortArr(int farr[], int size)
 				farr[j] = buff;
 			}
 }
+
+//This function breaks a given line of text into parts and returns the number of parts.
 int Tokenizer(char input[], char* output[], unsigned int num, char separator)
 {
 	int count = 0;
@@ -36,12 +39,16 @@ int Tokenizer(char input[], char* output[], unsigned int num, char separator)
 	}
 	return count;
 }
+
+//This function swaps two variables.
 void Swap(char** x, char** y)
 {
 	char* z = *x;
 	*x = *y;
 	*y = z;
 }
+
+//This function sorts the elements of the array according to the pointer to the function (Bigger).
 void Sort(char** w, UINT n, CMPFUNC Bigger)
 {
 	for (int i = 0; i < n; i++)
@@ -49,10 +56,14 @@ void Sort(char** w, UINT n, CMPFUNC Bigger)
 			if (Bigger(w[i], w[j]))
 				Swap(&w[i], &w[j]);
 }
+
+//This function compares two strings in length.
 bool CompareLengs(char* str1, char* str2)
 {
 	return strlen(str1) > strlen(str2);
 }
+
+//This function up characters.
 char Uper(char c)
 {
 	if (c >= 'a' && c <= 'z')
@@ -60,6 +71,8 @@ char Uper(char c)
 	else
 		return c;
 }
+
+//This function compares two strings in alphabetic.
 bool CompareOrder(char* str1, char* str2)
 {
 	char ch1 = Uper(*str1);
